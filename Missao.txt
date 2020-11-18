@@ -1,0 +1,7 @@
+Aluno
+Curso
+Turma
+Professor
+
+
+Otimo trabalho! A proxima missao eh descobrir as 6 dezenas.

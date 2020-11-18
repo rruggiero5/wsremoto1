@@ -1,0 +1,158 @@
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c
+$ git config --global user.name "Ricardo Ruggiero"
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c
+$ gti config --global user.email "rruggiero@globo.com"
+bash: gti: command not found
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c
+$ git config --global user.email "rruggiero@globo.com"
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c
+$ git clone https://github.com/rruggiero5/wsremoto
+Cloning into 'wsremoto'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), 1.59 KiB | 45.00 KiB/s, done.
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c
+$ ls
+'Dados do professor.txt'   Ecommerce/        formula1/    wsremoto/
+ diagramas.asta            Elevador/         unixyz/
+ diagramas.asta.lock       Exercicio_xpto/   Workspace/
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c
+$ cd wsremoto
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ ls
+README.md
+ls
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ ls
+README.md
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ ls
+Missao.txt  README.md
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ ls
+Missao.txt  README.md
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Missao.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ git add .
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Missao.txt
+
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ git commit -m "criacao do arquivo Missao"
+[main de5e03b] criacao do arquivo Missao
+ 1 file changed, 4 insertions(+)
+ create mode 100644 Missao.txt
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 354 bytes | 177.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/rruggiero5/wsremoto
+   9b4f8d5..de5e03b  main -> main
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ git pull
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.43 KiB | 45.00 KiB/s, done.
+From https://github.com/rruggiero5/wsremoto
+   de5e03b..82989d5  main       -> origin/main
+Updating de5e03b..82989d5
+Fast-forward
+ Missao.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$
+
+
+
+
+
+
+
+
+
+
+
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ git add .
+warning: LF will be replaced by CRLF in .metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in .metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Ecommerce/2020/11/46/refactorings.index.
+The file will have its original line endings in your working directory
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ git commit -m "Adicao da classe Teste"
+[main b28433b] Adicao da classe Teste
+ 20 files changed, 48 insertions(+), 20 deletions(-)
+ create mode 100644 .metadata/.plugins/org.eclipse.core.resources/.history/12/10b271e02425001b1618eaf9f1cb0b73
+ rename Ecommerce/src/br/com/ecommerce/implementacao/ImplementarVenda2.java => .metadata/.plugins/org.eclipse.core.resources/.history/4d/7062b8cf2425001b1618eaf9f1cb0b73 (100%)
+ rewrite .metadata/.plugins/org.eclipse.core.resources/.projects/Ecommerce/.indexes/e4/50/81/40/8d/history.index (100%)
+ rewrite .metadata/.plugins/org.eclipse.core.resources/.projects/Ecommerce/.markers (100%)
+ rename .metadata/.plugins/org.eclipse.core.resources/.root/{2.tree => 3.tree} (91%)
+ rewrite .metadata/.plugins/org.eclipse.jdt.core/1444270623.index (97%)
+ rewrite .metadata/.plugins/org.eclipse.jdt.core/175139432.index (88%)
+ rewrite .metadata/.plugins/org.eclipse.jdt.core/2296325567.index (76%)
+ rewrite .metadata/.plugins/org.eclipse.jdt.core/2322754305.index (86%)
+ rewrite .metadata/.plugins/org.eclipse.jdt.core/239670524.index (76%)
+ rewrite .metadata/.plugins/org.eclipse.jdt.core/3783611312.index (96%)
+ rewrite .metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/Ecommerce/2020/11/46/refactorings.history (92%)
+ create mode 100644 Ecommerce/src/br/com/ecommerce/implementacao/Teste.java
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$ git push
+Enumerating objects: 97, done.
+Counting objects: 100% (97/97), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (51/51), 12.11 KiB | 476.00 KiB/s, done.
+Total 51 (delta 16), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (16/16), completed with 16 local objects.
+To https://github.com/rruggiero5/wsremoto
+   b3685f5..b28433b  main -> main
+
+004154456@TREDOTIWX119-VM MINGW64 ~/Desktop/Turma 11c/wsremoto (main)
+$
+
