@@ -1,5 +1,7 @@
 package br.com.finalproject.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,6 +20,37 @@ public class MusicaController {
 
 	@Autowired
 	private MusicaDAO dao;
+	
+	//método post para relatorio por artista
+	@PostMapping("/relatorioporartista")
+	public ResponseEntity<List<Musica>> getMusicaArtista(@RequestBody Musica objeto){
+		List<Musica> lista = dao.findByArtistaId(objeto.getArtista().getId());
+		if (lista.size()==0) {
+			return ResponseEntity.status(404).build();
+		}
+		return ResponseEntity.ok(lista);
+	}
+	
+	//método post para relatorio por título
+	@PostMapping("/relatorioportitulo")
+	public ResponseEntity<List<Musica>> getMusicaTitulo(@RequestBody Musica objeto){
+		List<Musica> lista = dao.findByTitulo(objeto.getTitulo());
+		if (lista.size()==0) {
+			return ResponseEntity.status(404).build();
+		}
+		return ResponseEntity.ok(lista);
+	}
+
+	//método post para relatorio por título e artista
+	@PostMapping("/relatorioportituloartista")
+	public ResponseEntity<List<Musica>> getMusicaTituloArtista(@RequestBody Musica objeto){
+		List<Musica> lista = dao.findByTituloAndArtistaId(objeto.getTitulo(), objeto.getArtista().getId());
+		if (lista.size()==0) {
+			return ResponseEntity.status(404).build();
+		}
+		return ResponseEntity.ok(lista);
+	}	
+	
 	
 	@GetMapping("/musica/{cod}")
 	public ResponseEntity<Musica> getMusica(@PathVariable int cod){
