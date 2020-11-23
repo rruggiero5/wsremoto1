@@ -20,6 +20,19 @@ public class ArtistaController {
 	@Autowired
 	private ArtistaDAO dao;
 
+	@PostMapping("/novoartista")
+	public ResponseEntity<Artista> gravar(@RequestBody Artista objeto){
+		try{
+			dao.save(objeto);
+
+			return ResponseEntity.ok(objeto);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.status(403).build();
+		}
+	}
+
+
 
 	@GetMapping("/artistas")	
 	public ResponseEntity<List<Artista>> getAll(){
@@ -29,15 +42,17 @@ public class ArtistaController {
 		}		
 		return ResponseEntity.ok(lista);		
 	}
-	
-	//@PostMapping("/nome")
-	//public ResponseEntity<Artista> logar(@RequestBody Artista objeto){
-	//	Artista resposta = dao.findByNomeAndNacionalidade(objeto.getNomeartistico(), objeto.getNacionalidade());
-	//	if(resposta==null) {
-	//		return ResponseEntity.status(404).build();
-	//	}
-	//	return ResponseEntity.ok(resposta);
 
-	//}
+	@PostMapping("/nome")
+	public ResponseEntity<Artista> logar(@RequestBody Artista objeto){
+		Artista resposta = dao.findByNomeArtisticoAndNacionalidade(objeto.getNomeArtistico(), objeto.getNacionalidade());
+		if(resposta==null) {
+			return ResponseEntity.status(404).build();
+		}
+		return ResponseEntity.ok(resposta);
+		
+		
+
+	}
 
 }

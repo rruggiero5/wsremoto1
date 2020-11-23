@@ -6,6 +6,6 @@ import br.com.finalproject.model.Artista;
 
 public interface ArtistaDAO extends CrudRepository<Artista,Integer>{
 
-	public Artista findByNomeAndNacionalidade(String nomeartistico, String nacionalidade);
+	public Artista findByNomeArtisticoAndNacionalidade(String nomeartistico, String nacionalidade);
 	
 }
