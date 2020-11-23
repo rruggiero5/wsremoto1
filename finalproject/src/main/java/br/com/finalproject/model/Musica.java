@@ -12,6 +12,9 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name="TB_MUSICA")
 
@@ -30,9 +33,12 @@ public class Musica {
 
 	@Column(name="cadastro")
 	@Temporal(TemporalType.DATE)
+	//MM => mês    mm=> minuto
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd/MM/yyyy")
 	private Date cadastro;
 
 	@ManyToOne
+	@JsonIgnoreProperties("musicas")
 	private Artista artista;
 	
 		

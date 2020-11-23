@@ -19,6 +19,7 @@ public class ArtistaController {
 
 	@Autowired
 	private ArtistaDAO dao;
+	
 
 	@PostMapping("/novoartista")
 	public ResponseEntity<Artista> gravar(@RequestBody Artista objeto){

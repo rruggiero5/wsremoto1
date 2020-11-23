@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 
 @Entity
@@ -30,13 +32,11 @@ public class Artista {
 	private String nacionalidade;
 	
 	@OneToMany(mappedBy="artista", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties("artista")
 	private List<Musica> musicas;
 	
 
 	
-		
-
-
 	public Artista() {
 		super();
 	}
