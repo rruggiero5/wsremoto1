@@ -1,0 +1,11 @@
+use projeto;
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (3,"16:30","10:00","Perdizes");
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (4,"16:30","10:00","Centro");
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (5,"16:30","10:00","Morumbi");
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (6,"16:30","10:00","Tatuapé");
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (7,"16:30","10:00","Penha");
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (8,"16:30","10:00","Pacaembu");
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (9,"16:30","10:00","Paraíso");
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (10,"16:30","10:00","Bela Vista");
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (1,"16:30","10:00","Jardins");
+INSERT INTO `tb_agencia` (`id`,`hora_fim`,`hora_inicio`,`nome_agencia`) VALUES (2,"16:30","10:00","Moóca");
